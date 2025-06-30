@@ -1,5 +1,5 @@
 ﻿cmake_minimum_required (VERSION 3.25)
-project("PiSubmarine.Api.Internal.I2CDriverConcept")
+project("PiSubmarine.Api.Internal.I2C")
 
 set(_build_cmake_url "https://raw.githubusercontent.com/PiSubmarine/Build.CMake/main/PiSubmarine.Build.CMake.cmake")
 set(_build_cmake_local "${CMAKE_SOURCE_DIR}/PiSubmarine.Build.CMake.cmake")
