@@ -1,4 +1,4 @@
-#prgagma once
+#pragma once
 
 #include <cstdint>
 #include <functional>
