@@ -1,12 +1,11 @@
 #pragma once
 
-namespace PiSubmarine::Api::Internal
+#include "PiSubmarine/Api/Internal/I2C/Callback.h"
+
+namespace PiSubmarine::Api::Internal::I2C
 {
-
-	using I2CCallback = std::function<void(uint8_t deviceAddress, bool)>;
-
 	template<typename T>
-	concept I2CDriverConcept = requires(T driver, uint8_t deviceAddress, uint8_t * txData, uint8_t * rxData, size_t len, I2CCallback callback)
+	concept DriverConcept = requires(T driver, uint8_t deviceAddress, uint8_t * txData, uint8_t * rxData, size_t len, Callback callback)
 	{
 		{ driver.Write(deviceAddress, txData, len) } -> std::same_as<bool>;
 		{ driver.Read(deviceAddress, rxData, len) } -> std::same_as<bool>;
