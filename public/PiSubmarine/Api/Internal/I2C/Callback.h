@@ -3,4 +3,7 @@
 #include <cstdint>
 #include <functional>
 
-using Callback = std::function<void(uint8_t deviceAddress, bool)>;
+namespace PiSubmarine::Api::Internal::I2C
+{
+	using Callback = std::function<void(uint8_t deviceAddress, bool)>;
+}
